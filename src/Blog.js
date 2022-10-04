@@ -16,9 +16,10 @@ import post1 from './blog-post.1.md';
 import post2 from './blog-post.2.md';
 import post3 from './blog-post.3.md';
 
+
 const sections = [
-    { title: 'Technology', url: '#' },
-    { title: 'Design', url: '#' },
+    { title: 'Technology', url: '/Technology' },
+    { title: 'Design', url: '/Design' },
     { title: 'Culture', url: '#' },
     { title: 'Business', url: '#' },
     { title: 'Politics', url: '#' },
@@ -28,6 +29,19 @@ const sections = [
     { title: 'Style', url: '#' },
     { title: 'Travel', url: '#' },
 ];
+
+// function section() {
+//     return (
+//         <div className="cection">
+//             <BrowserRouter basename={process.env.PUBLIC_URL}>
+//                 <Routes>
+//                     <Route path={`/`} element={<Technology />} />
+//                     <Route path={`/`} element={<Design />} />
+//                 </Routes>
+//             </BrowserRouter>
+//         </div>
+//     );
+// }
 
 const mainFeaturedPost = {
     title: 'Title of a longer featured blog post',
