@@ -17,6 +17,13 @@ import Footer from '../Footer';
 // import post3 from './blog-post.3.md';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
+import styled from 'styled-components'
+
+
+
+
+
+
 
 const sections = [
     // { title: 'Home', url: '/' },
@@ -76,6 +83,38 @@ const sidebar = {
 
 const theme = createTheme();
 
+const StyledTable = styled.table`
+  width: 100%;
+  table-layout: fixed;
+`
+
+const TextArea = styled.textarea`
+  margin-top: 10px;
+  width: 100%;
+  height: 100px;
+`
+
+const Th = styled.th`
+  padding-top: 10px;
+`
+
+const StyledSubmit = styled.button`
+  border: 1px solid #000;
+  display: block;
+  padding: 18px 90px;
+  font-size: 16px;
+  margin: 10px auto 0;
+  color: #000;
+`
+
+const StyledInput = styled.input`
+  width: 100%;
+  border: solid 1px #000;
+  padding: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+`
+
 
 
 export default function From() {
@@ -116,7 +155,31 @@ export default function From() {
                     {post}
                 </Markdown>
             ))} */}
-                            お問い合わせ
+                            <form>
+                                <StyledTable>
+                                    <tbody>
+                                        <tr>
+                                            <Th>
+                                                <p>お名前</p>
+                                            </Th>
+                                            <td>
+                                                <StyledInput type={'text'} name={'name'} />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <Th>
+                                                <p>メールアドレス</p>
+                                            </Th>
+                                            <td>
+                                                <StyledInput type={'text'} gender={'gender'} />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </StyledTable>
+                                <p>お問い合わせ内容</p>
+                                <TextArea name={'inquiry'} />
+                                <StyledSubmit type={'submit'}>送信する</StyledSubmit>
+                            </form>
                         
 
 
@@ -140,5 +203,6 @@ export default function From() {
             <Footer />
         </ThemeProvider>
     );
+    
 }
 
