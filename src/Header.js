@@ -5,15 +5,21 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 
-function Header(props) {
-    const { sections, title } = props;
 
+
+
+function Header() {
+
+     
+
+    
     return (
         <React.Fragment>
             <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Button size="small">Subscribe</Button>
+                {/* ↑らしいけどここ何使う？ */}
                 <Typography
                     component="h2"
                     variant="h5"
@@ -21,8 +27,12 @@ function Header(props) {
                     align="center"
                     noWrap
                     sx={{ flex: 1 }}
+
+
                 >
-                    {title}
+                
+                    Reactでウェブサイトを作りたい
+                    {/* ↑サイトタイトル */}
                 </Typography>
                 <IconButton>
                     <SearchIcon />
@@ -36,18 +46,24 @@ function Header(props) {
                 variant="dense"
                 sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
             >
-                {sections.map((section) => (
-                    <Link
-                        color="inherit"
-                        noWrap
-                        key={section.title}
-                        variant="body2"
-                        href={section.url}
-                        sx={{ p: 1, flexShrink: 0 }}
-                    >
-                        {section.title}
-                    </Link>
-                ))}
+
+                
+
+                <Button href="/">
+                    Home
+                </Button>
+
+                <Button href="/Profile">
+                    プロフィール
+                </Button>
+
+
+                <Button href="/From">
+                    問い合わせ
+                </Button>
+
+
+
             </Toolbar>
         </React.Fragment>
     );

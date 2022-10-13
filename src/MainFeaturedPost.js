@@ -43,14 +43,14 @@ function MainFeaturedPost(props) {
                             pr: { md: 0 },
                         }}
                     >
-                        <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                            {post.title}
+                        <Typography component="h1" variant="h3" color="inherit" gutterBottom >
+                            Reactで動いてます
                         </Typography>
                         <Typography variant="h5" color="inherit" paragraph>
-                            {post.description}
+                            Reactでウェブサイトを作りたい
                         </Typography>
                         <Link variant="subtitle1" href="#">
-                            {post.linkText}
+                            続きをよみたい...そんな物いまはないｗ
                         </Link>
                     </Box>
                 </Grid>

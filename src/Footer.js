@@ -5,12 +5,14 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
+
+
 function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://mui.com/">
-                Your Website
+                M
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -19,7 +21,7 @@ function Copyright() {
 }
 
 function Footer(props) {
-    const { description, title } = props;
+    const {  title } = props;
 
     return (
         <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
@@ -27,14 +29,17 @@ function Footer(props) {
                 <Typography variant="h6" align="center" gutterBottom>
                     {title}
                 </Typography>
+
+            
                 <Typography
                     variant="subtitle1"
                     align="center"
                     color="text.secondary"
                     component="p"
                 >
-                    {description}
+                    Reactでウェブサイトを作りたい
                 </Typography>
+ 
                 <Copyright />
             </Container>
         </Box>

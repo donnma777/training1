@@ -6,12 +6,12 @@ import Container from '@mui/material/Container';
 // import FacebookIcon from '@mui/icons-material/Facebook';
 // import TwitterIcon from '@mui/icons-material/Twitter';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Header from './Header';
-import MainFeaturedPost from './MainFeaturedPost';
+import Header from '../Header';
+import MainFeaturedPost from '../MainFeaturedPost';
 // import FeaturedPost from './FeaturedPost';
 // import Main from './Main';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
+import Sidebar from '../Sidebar';
+import Footer from '../Footer';
 // import post1 from './blog-post.1.md';
 // import post2 from './blog-post.2.md';
 // import post3 from './blog-post.3.md';
@@ -78,12 +78,12 @@ const theme = createTheme();
 
 
 
-export default function Blog() {
+export default function Home() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <Container maxWidth="lg">
-                <Header  sections={sections} />
+                <Header sections={sections} />
                 <main>
                     <MainFeaturedPost post={mainFeaturedPost} />
                     {/* <Grid container spacing={4}>
@@ -91,12 +91,12 @@ export default function Blog() {
                             <FeaturedPost key={post.title} post={post} />
                         ))}
                     </Grid> */}
-                
 
-                {/* ここから記事 */}
+
+                    {/* ここから記事 */}
 
                     <Grid container spacing={5} sx={{ mt: 3 }}>
-                        
+
                         <Grid
                             item
                             xs={12}
@@ -116,12 +116,13 @@ export default function Blog() {
                     {post}
                 </Markdown>
             ))} */}
-                            ここに文字を挿入
+                            HOME
+
 
 
                         </Grid>
 
-                    {/* ここまで記事 */}
+                        {/* ここまで記事 */}
 
 
                         {/* < Main  />
@@ -136,7 +137,7 @@ export default function Blog() {
                     </Grid>
                 </main>
             </Container>
-            <Footer/>
+            <Footer />
         </ThemeProvider>
     );
 }
