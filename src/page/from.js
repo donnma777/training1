@@ -18,9 +18,9 @@ import Footer from '../Footer';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import styled from 'styled-components'
-
-
-
+import { useForm, Controller } from 'react-hook-form'
+import { ContactGoogleForm } from '@/constants/ContactGoogleForm'
+import axios from 'axios'
 
 
 
@@ -116,8 +116,38 @@ const StyledInput = styled.input`
 `
 
 
+const submit = (values) => {
+    // ReactHookFormは、hundleSubmitに渡した関数に、
+    // registerを利用して登録した各Inputの値をObjectとして渡されてくる。
+    // values.nameやvalues.genderと呼び出せる。便利ですね！
 
-export default function From() {
+    const GOOGLE_FORM_ACTION = ContactGoogleForm.action
+    // CORS対策は必須
+    const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
+
+    // PostのParm生成
+    const submitParams = new FormData()
+    submitParams.append(ContactGoogleForm.name, values.name)
+    submitParams.append(ContactGoogleForm.gender, values.gender)
+    submitParams.append(ContactGoogleForm.inquiry, values.inquiry)
+
+    // 実行
+    axios
+        .post(CORS_PROXY + GOOGLE_FORM_ACTION, submitParams)
+        .then(() => {
+            window.location.href = '/thanks' // 成功時
+        })
+        .catch((error) => {
+            console.log(error) // 失敗時
+        })
+}
+
+
+
+export const ContactForm: React.FC<any> = () => {
+    const { register, handleSubmit } = useForm({
+        mode: 'onChange',
+    })
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
@@ -180,7 +210,7 @@ export default function From() {
                                 <TextArea name={'inquiry'} />
                                 <StyledSubmit type={'submit'}>送信する</StyledSubmit>
                             </form>
-                        
+
 
 
                         </Grid>
@@ -203,6 +233,5 @@ export default function From() {
             <Footer />
         </ThemeProvider>
     );
-    
-}
 
+}
