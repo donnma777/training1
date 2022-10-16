@@ -18,6 +18,7 @@ import Footer from '../Footer';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
+
 const sections = [
     // { title: 'Home', url: '/' },
     // { title: 'プロフィール', url: '/Profile' },
@@ -27,6 +28,15 @@ const sections = [
 
 
 const mainFeaturedPost = {
+    // title: 'Reactで動いてます',
+    // description:
+    //     "Reactでウェブサイトを作りたい。",
+    image: 'https://source.unsplash.com/random',
+    // imageText: 'main image description',
+    // linkText: '続きを読む',
+};
+
+const From = {
     // title: 'Reactで動いてます',
     // description:
     //     "Reactでウェブサイトを作りたい。",
