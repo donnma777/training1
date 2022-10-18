@@ -37,12 +37,12 @@ const mainFeaturedPost = {
 };
 
 // const From = {
-    // title: 'Reactで動いてます',
-    // description:
-    //     "Reactでウェブサイトを作りたい。",
-    // image: 'https://source.unsplash.com/random',
-    // imageText: 'main image description',
-    // linkText: '続きを読む',
+// title: 'Reactで動いてます',
+// description:
+//     "Reactでウェブサイトを作りたい。",
+// image: 'https://source.unsplash.com/random',
+// imageText: 'main image description',
+// linkText: '続きを読む',
 // };
 
 // const featuredPosts = [
@@ -88,7 +88,7 @@ const theme = createTheme();
 
 
 
-export default function Home() {
+export default function Test() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />

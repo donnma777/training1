@@ -1,11 +1,15 @@
 
 const FormKeys = {
-    formUrl: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSenG8UvlUtyKq1FvEv98xb2Z7vFZ94z1EVe5o7LjZruIcPl7Q/formResponse",
-    corsAnywhere: "https://humamo3939@gmail.com.herokuapp.com/",
-    name: "entry.1605728422",
-    gender: "entry.1318754567",
-    language: "entry.115194556",
-    message: "entry.78996968"
+    formUrl: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfqt6xqvxNC-jAINoLQBbPPCt5ScyELggVvt8dfDkKGijsxwQ/formResponse",
+    name: "entry.138770988",
+    // gender: "entry.1294529934",
+    // language: "entry.1993522736",
+    mail: "entry.937318511",
+    message: "entry.2079511436",
+    corsAnywhere: ""
 };
 
 export default FormKeys;
+
+
+// corsAnywhere→ホスティングが必要らしい

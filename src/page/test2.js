@@ -19,6 +19,18 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
 
+import axios from "axios";
+
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+// import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
+// import { useSate } from "React";
+// import { SettingsInputComponent } from '@material-ui/icons';
+
+
+
 const sections = [
     // { title: 'Home', url: '/' },
     // { title: 'プロフィール', url: '/Profile' },
@@ -37,12 +49,12 @@ const mainFeaturedPost = {
 };
 
 // const From = {
-    // title: 'Reactで動いてます',
-    // description:
-    //     "Reactでウェブサイトを作りたい。",
-    // image: 'https://source.unsplash.com/random',
-    // imageText: 'main image description',
-    // linkText: '続きを読む',
+// title: 'Reactで動いてます',
+// description:
+//     "Reactでウェブサイトを作りたい。",
+// image: 'https://source.unsplash.com/random',
+// imageText: 'main image description',
+// linkText: '続きを読む',
 // };
 
 // const featuredPosts = [
@@ -87,8 +99,53 @@ const sidebar = {
 const theme = createTheme();
 
 
+const RegisterData = async (userData) => {
+    let res = await axios.post("https://docs.google.com/forms/u/0/d/e/1FAIpQLSenG8UvlUtyKq1FvEv98xb2Z7vFZ94z1EVe5o7LjZruIcPl7Q/formResponse", JSON.stringify(userData), {
+    });
+    console.log(res);
+    res = res.data;
+    return res;
+};
 
-export default function Home() {
+
+export default function Test2() {
+
+    const [name, setName] = React.useState('');
+    const [age, setAge] = React.useState('');
+
+    // const [age, setage] = React.useState(0);
+
+
+    // React.useEffect(() => {
+    //     (async () => {
+    //         const listData = await RegisterData();
+    //         console.log(listData);
+    //     })();
+    // }, []);
+
+    const onChangeName = (event) => {
+        // console.log(event.target.value);
+        setName(event.target.value);
+    }
+
+    const onChangeAge = (event) => {
+        // console.log(event.target.value);
+        setAge(event.target.value);
+    }
+
+    const sendData = async () => {
+        console.log(name);
+        console.log(age);
+        const userData = {
+            name: name,
+            age: age
+        };
+        const res = await RegisterData(userData);
+        console.log(res);
+        return res.data;
+    };
+
+
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
@@ -126,9 +183,31 @@ export default function Home() {
                     {post}
                 </Markdown>
             ))} */}
-                            HOME
-                            てすと
+                            <div>
 
+                                <Stack direction="row" spacing={2}>
+                                    <TextField
+                                        required
+                                        id="outlined-required"
+                                        label="名前"
+                                        onChange={(event) => onChangeName(event)}
+                                    />
+                                    <TextField
+
+                                        required
+                                        id="outlined-required"
+                                        label="年齢"
+                                        onChange={(event) => onChangeAge(event)}
+                                    />
+                                    <Button
+                                        padding='3'
+                                        onClick={sendData}
+                                        variant="contained"
+                                        endIcon={<SendIcon />}>
+                                        登録
+                                    </Button>
+                                </Stack>
+                            </div>
 
 
                         </Grid>
