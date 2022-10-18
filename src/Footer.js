@@ -37,7 +37,7 @@ function Footer(props) {
                     color="text.secondary"
                     component="p"
                 >
-                    Reactでウェブサイトを作りたい
+                    Reactでウェブサイトを作りたい委員会
                 </Typography>
  
                 <Copyright />

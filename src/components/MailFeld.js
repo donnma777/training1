@@ -27,7 +27,7 @@ const MailField: React.VFC<MailFieldProps> = (props) => {
             <TextField
                 type="text"
                 value={mail}
-                label="mail"
+                label="mail（の予定）"
                 onChange={(event) => handleChange(event)}
                 variant="standard"
             />

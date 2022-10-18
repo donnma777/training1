@@ -67,12 +67,12 @@ const mainFeaturedPost = {
 // const posts = [post1, post2];
 
 const sidebar = {
-    title: '無題',
+    title: '告知',
     description:
-        'なにか入れる',
+        '特にない...',
     archives: [
-        { title: 'March 2020', url: '#' },
-        { title: 'February 2020', url: '#' },
+        { title: '', url: '#' },
+        { title: '', url: '#' },
 
     ],
     social: [
@@ -118,7 +118,7 @@ export default function Home() {
                             }}
                         >
                             <Typography variant="h6" gutterBottom>
-                                {/* {title} */}
+                                {/* {title} */}HOME
                             </Typography>
                             <Divider />
                             {/* {posts.map((post) => (
@@ -126,10 +126,14 @@ export default function Home() {
                     {post}
                 </Markdown>
             ))} */}
-                            HOME
-                            てすと
+                        
 
-
+                            <Typography>
+                                <p>Reactでウェブサイトを作ってみました。</p>
+                                <p>勉強も兼ねてこのサイトで検証しています。</p>
+                                <p>右下に今回作成したsampleコード（GitHub）あるので参考にどうぞ</p>
+                                
+                            </Typography>
 
                         </Grid>
 

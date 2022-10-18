@@ -80,12 +80,14 @@ const mainFeaturedPost = {
 // const posts = [post1, post2];
 
 const sidebar = {
-    title: '無題',
+    title: 'Googleフォームと連動してるらしい。',
     description:
-        'なにか入れる',
+'※試用段階なので個人情報はいれないでね'
+               
+        ,
     archives: [
-        { title: 'March 2020', url: '#' },
-        { title: 'February 2020', url: '#' },
+      { title: 'スプレッドシート', url: 'https://docs.google.com/spreadsheets/d/13RwdHsOlYvM66m-H1xt8elavKLgEo28j6eCmsPaEHgY/edit?usp=sharing' },
+
 
     ],
     social: [

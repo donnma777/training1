@@ -57,12 +57,12 @@ const mainFeaturedPost = {
 // const posts = [post1, post2];
 
 const sidebar = {
-    title: '無題',
+    title: '最終更新',
     description:
-        'なにか入れる',
+        '2022/10/19',
     archives: [
-        { title: 'March 2020', url: '#' },
-        { title: 'February 2020', url: '#' },
+        // { title: 'March 2020', url: '#' },
+        // { title: 'February 2020', url: '#' },
 
     ],
     social: [
@@ -116,9 +116,15 @@ export default function Profile() {
                     {post}
                 </Markdown>
             ))} */}
-                            プロフィール
+                        
 
 
+                            <Typography>
+                                <p>initial:M</p>
+                                <p>年齢性別:ご想像にお任せします</p>
+                                <p>プログラミングスキル:JavaScript,React</p>
+                                <p>使ったことあるOSとか:Windows,Linux,Cisco（マックって食べれるのかな( ﾟдﾟ)？？？）</p>
+                            </Typography>
 
                         </Grid>
 
