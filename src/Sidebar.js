@@ -6,11 +6,8 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
-// import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Button from '@mui/material/Button';
-// import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
-
 
 function Sidebar(props) {
     const { archives, description, social, title } = props;
@@ -31,12 +28,9 @@ function Sidebar(props) {
                     {archive.title}
                 </Link>
             ))}
-
             <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
                 Social
             </Typography>
-
-
 
             {social.map((network) => (
                 <Link
@@ -54,7 +48,6 @@ function Sidebar(props) {
 
             ))}
 
-
             <div>
                 <Button variant="contained" href="https://github.com/donnma777/training1">
                     <GitHubIcon />
@@ -64,15 +57,9 @@ function Sidebar(props) {
                     <TwitterIcon />
                     Twitter
                 </Button>
-
             </div>
-
-
-
-
         </Grid>
     );
-
 }
 
 Sidebar.propTypes = {

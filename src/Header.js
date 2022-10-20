@@ -5,16 +5,8 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
-// import Link from '@mui/material/Link';
-
-
-
 
 function Header() {
-
-     
-
-    
     return (
         <React.Fragment>
             <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -27,10 +19,7 @@ function Header() {
                     align="center"
                     noWrap
                     sx={{ flex: 1 }}
-
-
                 >
-                
                     Reactでウェブサイトを作りたい
                     {/* ↑サイトタイトル */}
                 </Typography>
@@ -46,32 +35,21 @@ function Header() {
                 variant="dense"
                 sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
             >
-
-                
-
                 <Button href="/">
                     Home
                 </Button>
-
                 <Button href="/Profile">
                     プロフィール
                 </Button>
-
-
                 <Button href="/From">
                     問い合わせ
                 </Button>
-
-
                 <Button href="/Test">
                     テスト
                 </Button>
-
-
                 <Button href="/Test2">
                     テスト2
                 </Button>
-
             </Toolbar>
         </React.Fragment>
     );

@@ -16,7 +16,7 @@ type MessageFieldProps = {
 }
 
 const MessageField: React.VFC<MessageFieldProps> = (props) => {
-  const {message, setMessage} = props;
+  const { message, setMessage } = props;
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     setMessage(event.target.value);

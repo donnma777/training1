@@ -16,7 +16,7 @@ type NameFieldProps = {
 }
 
 const NameField: React.VFC<NameFieldProps> = (props) => {
-  const {name, setName} = props;
+  const { name, setName } = props;
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     setName(event.target.value);
