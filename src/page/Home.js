@@ -10,32 +10,26 @@ import Footer from '../Footer';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
-const sections = [
-];
-
+const sections = [];
 
 const mainFeaturedPost = {
     image: 'https://source.unsplash.com/random',
 };
 
 const sidebar = {
-    title: '告知',
+    title: '無題',
     description:
-        '特にない...',
+        'なにか入れる',
     archives: [
-        { title: '', url: '#' },
-        { title: '', url: '#' },
+        { title: 'March 2020', url: '#' },
+        { title: 'February 2020', url: '#' },
     ],
     social: [],
 };
 
-
-
 const theme = createTheme();
 
-
-
-export default function Home() {
+export default function HOME() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
@@ -43,6 +37,7 @@ export default function Home() {
                 <Header sections={sections} />
                 <main>
                     <MainFeaturedPost post={mainFeaturedPost} />
+
                     {/* ここから記事 */}
 
                     <Grid container spacing={5} sx={{ mt: 3 }}>
@@ -58,17 +53,21 @@ export default function Home() {
                             }}
                         >
                             <Typography variant="h6" gutterBottom>
-                                {/* {title} */}HOME
+                                {/* {title} */}
+                                HOME
                             </Typography>
                             <Divider />
 
                             <Typography>
-                                <p>Reactでウェブサイトを作ってみました。</p>
-                                <p>勉強も兼ねてこのサイトで検証しています。</p>
-                                <p>右下に今回作成したsampleコード（GitHub）あるので参考にどうぞ</p>
+                                Reactでウェブサイトを作ってみました。
+                            </Typography>
+                            <Typography>
+                                勉強も兼ねてこのサイトで検証しています。
 
                             </Typography>
-
+                            <Typography>
+                                右下に今回作成したsampleコード（GitHub）あるので参考にどうぞ
+                            </Typography>
                         </Grid>
                         {/* ここまで記事 */}
                         <Sidebar
@@ -84,4 +83,6 @@ export default function Home() {
         </ThemeProvider>
     );
 }
+
+
 

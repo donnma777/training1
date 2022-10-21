@@ -1,5 +1,5 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
@@ -55,14 +55,14 @@ function Header() {
     );
 }
 
-Header.propTypes = {
-    sections: PropTypes.arrayOf(
-        PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            url: PropTypes.string.isRequired,
-        }),
-    ).isRequired,
-    title: PropTypes.string.isRequired,
-};
+// Header.propTypes = {
+//     sections: PropTypes.arrayOf(
+//         PropTypes.shape({
+//             title: PropTypes.string.isRequired,
+//             url: PropTypes.string.isRequired,
+//         }),
+//     ).isRequired,
+//     title: PropTypes.string.isRequired,
+// };
 
 export default Header;

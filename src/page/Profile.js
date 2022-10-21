@@ -35,6 +35,8 @@ export default function Profile() {
                 <main>
                     <MainFeaturedPost post={mainFeaturedPost} />
 
+                    {/* ここから記事 */}
+
                     <Grid container spacing={5} sx={{ mt: 3 }}>
 
                         <Grid
@@ -54,16 +56,20 @@ export default function Profile() {
                             <Divider />
 
                             <Typography>
-                                <p>initial:M</p>
-                                <p>年齢性別:ご想像にお任せします</p>
-                                <p>プログラミングスキル:JavaScript,React</p>
-                                <p>使ったことあるOSとか:Windows,Linux,Cisco（マックって食べれるのかな( ﾟдﾟ)？？？）</p>
+                                initial:M
                             </Typography>
+                            <Typography>
+                                年齢性別:ご想像にお任せします
 
+                            </Typography>
+                            <Typography>
+                                プログラミングスキル:JavaScript,React
+                            </Typography>
+                            <Typography>
+                                使ったことあるOSとか:Windows,Linux,Cisco（マックって食べれるのかな( ﾟдﾟ)？？？）
+                            </Typography>
                         </Grid>
-
                         {/* ここまで記事 */}
-
                         <Sidebar
                             title={sidebar.title}
                             description={sidebar.description}
@@ -77,4 +83,3 @@ export default function Profile() {
         </ThemeProvider>
     );
 }
-

@@ -20,24 +20,20 @@ import MailField from "../components/MailFeld";
 import MessageField from "../components/MessageField";
 import FormKeys from "./FormKeys";
 
-
 const sections = [];
 
-
 const mainFeaturedPost = {
-    image: 'https://source.unsplash.com/random',
+  image: 'https://source.unsplash.com/random',
 };
 
 const sidebar = {
-title: 'Googleフォームと連動してるらしい。',
+  title: 'Googleフォームと連動してるらしい。',
   description:
-'※試用段階なので個人情報はいれないでね'
-
-  ,
+    '※試用段階なので個人情報はいれないでね',
   archives: [
     { title: 'スプレッドシート', url: 'https://docs.google.com/spreadsheets/d/13RwdHsOlYvM66m-H1xt8elavKLgEo28j6eCmsPaEHgY/edit?usp=sharing' },
   ],
-    social: [],
+  social: [],
 };
 
 const theme = createTheme();
@@ -91,7 +87,7 @@ export default function From() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="lg">
+        <Container maxWidth="lg">
         <Header sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
@@ -151,7 +147,7 @@ export default function From() {
             />
           </Grid>
         </main>
-      </Container>
+    </Container>
       <Footer />
     </ThemeProvider>
   );
