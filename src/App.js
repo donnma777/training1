@@ -4,7 +4,6 @@ import Profile from './page/Profile';
 import Home from './page/Home';
 import From from './page/From';
 import Test from './page/test';
-import Test2 from './page/test2';
 
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
           <Route path={`/Profile`} element={<Profile />} />
           <Route path={`/From`} element={<From />} />
           <Route path={`/Test`} element={<Test />} />
-          <Route path={`/Test2`} element={<Test2 />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -47,9 +47,6 @@ function Header() {
                 <Button href="/Test">
                     テスト
                 </Button>
-                <Button href="/Test2">
-                    テスト2
-                </Button>
             </Toolbar>
         </React.Fragment>
     );

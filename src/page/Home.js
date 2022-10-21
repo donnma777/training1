@@ -17,9 +17,9 @@ const mainFeaturedPost = {
 };
 
 const sidebar = {
-    title: '無題',
+    title: '最終更新',
     description:
-        'なにか入れる',
+        '2022/10/21',
     archives: [
         { title: 'March 2020', url: '#' },
         { title: 'February 2020', url: '#' },
