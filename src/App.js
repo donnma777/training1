@@ -4,7 +4,7 @@ import Profile from './page/Profile';
 import Home from './page/Home';
 import From from './page/From';
 import Test from './page/test';
-
+import FormComplete from './components/FormComplete';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route path={`/Profile`} element={<Profile />} />
           <Route path={`/From`} element={<From />} />
           <Route path={`/Test`} element={<Test />} />
+          <Route path={`/FormComplete`} element={<FormComplete />} />
         </Routes>
       </BrowserRouter>
     </div>

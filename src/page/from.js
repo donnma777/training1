@@ -20,6 +20,7 @@ import MailField from "../components/MailFeld";
 import MessageField from "../components/MessageField";
 import FormKeys from "./FormKeys";
 
+
 const sections = [];
 
 const mainFeaturedPost = {
@@ -76,7 +77,7 @@ export default function From() {
 
     Axios.post(FormKeys.corsAnywhere + FormKeys.formUrl, submitParams).then(() => {
       setLoading(false);
-      navigate("/complete");
+      navigate("/FormComplete");
     }).catch(() => {
       setLoading(false);
       console.log('エラーです');
@@ -126,6 +127,10 @@ export default function From() {
                   <Button fullWidth variant="contained" css={submitButtonStyles} onClick={handleClick}>
                     フォームを送信
                   </Button>
+
+
+                  
+                  
                 </form>
                 <Backdrop
                   sx={{

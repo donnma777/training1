@@ -4,10 +4,14 @@ const FormKeys = {
     name: "entry.138770988",
     mail: "entry.937318511",
     message: "entry.2079511436",
-    corsAnywhere: ""
+    corsAnywhere: "https://cors-anywhere.herokuapp.com/"
 };
+
+
+
 
 export default FormKeys;
 
 
-// corsAnywhere→ホスティングが必要らしい
+// corsAnywhere→プロキシサーバが必要みたい
+
