@@ -21,15 +21,15 @@ const sidebar = {
     description:
         '2022/10/21',
     archives: [
-        { title: 'March 2020', url: '#' },
-        { title: 'February 2020', url: '#' },
+        // { title: 'March 2020', url: '#' },
+        // { title: 'February 2020', url: '#' },
     ],
     social: [],
 };
 
 const theme = createTheme();
 
-export default function HOME() {
+export default function Home() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
