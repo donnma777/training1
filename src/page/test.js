@@ -56,10 +56,9 @@ export default function Test() {
                                 {/* {title} */}
                             </Typography>
                             <Divider />
-                            HOME
-                            てすと
+                            testページです
 
-                            
+
                         </Grid>
                         {/* ここまで記事 */}
                         <Sidebar

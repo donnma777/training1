@@ -21,7 +21,7 @@ function Copyright() {
 }
 
 function Footer(props) {
-    const {  title } = props;
+    const { title } = props;
 
     return (
         <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
@@ -30,7 +30,7 @@ function Footer(props) {
                     {title}
                 </Typography>
 
-            
+
                 <Typography
                     variant="subtitle1"
                     align="center"
@@ -39,7 +39,7 @@ function Footer(props) {
                 >
                     Reactでウェブサイトを作りたい委員会
                 </Typography>
- 
+
                 <Copyright />
             </Container>
         </Box>

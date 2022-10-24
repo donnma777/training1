@@ -2,16 +2,14 @@ import * as React from 'react';
 // import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
+
 import Typography from '@mui/material/Typography';
 
 function Header() {
     return (
         <React.Fragment>
             <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Button size="small">Subscribe</Button>
-                {/* ↑らしいけどここ何使う？ */}
+                <Button size="small" href="/">Home</Button>
                 <Typography
                     component="h2"
                     variant="h5"
@@ -23,21 +21,16 @@ function Header() {
                     Reactでウェブサイトを作りたい
                     {/* ↑サイトタイトル */}
                 </Typography>
-                <IconButton>
-                    <SearchIcon />
-                </IconButton>
-                <Button variant="outlined" size="small">
+
+                {/* <Button variant="outlined" size="small">
                     Sign up
-                </Button>
+                </Button> */}
             </Toolbar>
             <Toolbar
                 component="nav"
                 variant="dense"
                 sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
             >
-                <Button href="/">
-                    Home
-                </Button>
                 <Button href="/Profile">
                     プロフィール
                 </Button>

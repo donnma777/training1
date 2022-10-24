@@ -88,7 +88,7 @@ export default function From() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-        <Container maxWidth="lg">
+      <Container maxWidth="lg">
         <Header sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
@@ -129,8 +129,8 @@ export default function From() {
                   </Button>
 
 
-                  
-                  
+
+
                 </form>
                 <Backdrop
                   sx={{
@@ -152,7 +152,7 @@ export default function From() {
             />
           </Grid>
         </main>
-    </Container>
+      </Container>
       <Footer />
     </ThemeProvider>
   );
