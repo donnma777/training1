@@ -11,11 +11,11 @@ function App() {
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path={`/`} element={<Home />} />
-          <Route path={`/Profile`} element={<Profile />} />
-          <Route path={`/From`} element={<From />} />
-          <Route path={`/Test`} element={<Test />} />
-          <Route path={`/FormComplete`} element={<FormComplete />} />
+          <Route path={`training1/`} element={<Home />} />
+          <Route path={`training1/Profile`} element={<Profile />} />
+          <Route path={`training1/From`} element={<From />} />
+          <Route path={`training1/Test`} element={<Test />} />
+          <Route path={`training1/FormComplete`} element={<FormComplete />} />
           <Route path={"*"} element={<div>404 ページが見つかりません。</div>} />
         </Routes>
       </BrowserRouter>
