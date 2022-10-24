@@ -16,6 +16,7 @@ function App() {
           <Route path={`/From`} element={<From />} />
           <Route path={`/Test`} element={<Test />} />
           <Route path={`/FormComplete`} element={<FormComplete />} />
+          <Route path={"*"} element={<div>404 ページが見つかりません。</div>} />
         </Routes>
       </BrowserRouter>
     </div>
