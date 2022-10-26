@@ -9,7 +9,7 @@ import Sidebar from '../Sidebar';
 import Footer from '../Footer';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
-
+import { Link } from "react-router-dom";
 
 const sections = [];
 
@@ -18,19 +18,19 @@ const mainFeaturedPost = {
 };
 
 const sidebar = {
-    title: '最終更新',
+    title: '無題',
     description:
-        '2022/10/26',
+        'なにか入れる',
     archives: [
-        // { title: 'March 2020', url: '#' },
-        // { title: 'February 2020', url: '#' },
+        { title: 'March 2020', url: '#' },
+        { title: 'February 2020', url: '#' },
     ],
     social: [],
 };
 
 const theme = createTheme();
 
-export default function Home() {
+export default function NotFound() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
@@ -54,21 +54,12 @@ export default function Home() {
                             }}
                         >
                             <Typography variant="h6" gutterBottom>
-                                {/* {title} */}
-                                HOME
+                                {/* {title} */}404ページが見つかりません。
                             </Typography>
                             <Divider />
+                            <Link to={`/`}>ホームに戻る</Link>
 
-                            <Typography>
-                                Reactでウェブサイトを作ってみました。
-                            </Typography>
-                            <Typography>
-                                勉強も兼ねてこのサイトで検証しています。
 
-                            </Typography>
-                            <Typography>
-                                右下に今回作成したsampleコード（GitHub）あるので参考にどうぞ
-                            </Typography>
                         </Grid>
                         {/* ここまで記事 */}
                         <Sidebar
@@ -84,6 +75,4 @@ export default function Home() {
         </ThemeProvider>
     );
 }
-
-
 

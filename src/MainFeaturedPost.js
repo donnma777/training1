@@ -2,10 +2,16 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import { Link } from "react-router-dom";
+
+import Button from "@mui/material/Button";
 
 function MainFeaturedPost(props) {
+
+
+
     const { post } = props;
     return (
         <Paper
@@ -46,9 +52,13 @@ function MainFeaturedPost(props) {
                         <Typography variant="h5" color="inherit" paragraph>
                             Reactでウェブサイトを作りたい
                         </Typography>
-                        <Link variant="subtitle1" href="/Profile">
-                            プロフィールに移動
-                        </Link>
+
+                        <Typography >
+
+                            <Button variant="contained" to="/Profile" component={Link}>
+                                プロフィールに移動
+                            </Button>
+                        </Typography>
                     </Box>
                 </Grid>
             </Grid>

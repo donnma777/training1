@@ -4,6 +4,7 @@ import Profile from './page/Profile';
 import Home from './page/Home';
 import From from './page/From';
 import Test from './page/test';
+import NotFound from './page/NotFound';
 import FormComplete from './components/FormComplete';
 
 function App() {
@@ -11,12 +12,12 @@ function App() {
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path={`training1/`} element={<Home />} />
-          <Route path={`training1/Profile`} element={<Profile />} />
-          <Route path={`training1/From`} element={<From />} />
-          <Route path={`training1/Test`} element={<Test />} />
-          <Route path={`training1/FormComplete`} element={<FormComplete />} />
-          <Route path={"*"} element={<div>404 ページが見つかりません。</div>} />
+          <Route path={`/`} element={<Home />} />
+          <Route path={`/Profile`} element={<Profile />} />
+          <Route path={`/From`} element={<From />} />
+          <Route path={`/Test`} element={<Test />} />
+          <Route path={`/FormComplete`} element={<FormComplete />} />
+          <Route path={`/*/`} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
